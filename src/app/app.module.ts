@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { EmployeeloginComponent } from './employeelogin/employeelogin.component';
 
 const myRoute=[
   {
@@ -22,7 +23,8 @@ const myRoute=[
   declarations: [
     AppComponent,
     AdminLoginComponent,
-    HomeComponent
+    HomeComponent,
+    EmployeeloginComponent
   ],
   imports: [
     BrowserModule,
