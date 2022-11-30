@@ -8,6 +8,8 @@ import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { EmployeeloginComponent } from './employeelogin/employeelogin.component';
 import { EmployeeregComponent } from './employeereg/employeereg.component';
+import { ViewcourseComponent } from './viewcourse/viewcourse.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 const myRoute=[
   {
@@ -15,16 +17,20 @@ const myRoute=[
     component:HomeComponent
   },
   {
-    path:"/adminlogin",
+    path:"adminlogin",
     component:AdminLoginComponent
   },
   {
-    path:"/employeelogin",
+    path:"employeelogin",
     component:EmployeeloginComponent
   },
   {
-    path:"/employeereg",
+    path:"employeereg",
     component:EmployeeregComponent
+  },
+  {
+    path:"viewcourse",
+    component:ViewcourseComponent
   }
 ]
 
@@ -34,7 +40,9 @@ const myRoute=[
     AdminLoginComponent,
     HomeComponent,
     EmployeeloginComponent,
-    EmployeeregComponent
+    EmployeeregComponent,
+    ViewcourseComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
