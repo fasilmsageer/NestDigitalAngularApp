@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-viewfriends',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./viewfriends.component.css']
 })
 export class ViewfriendsComponent {
+  
+  constructor(private api:ApiService){
+  api. fetchfriends().subscribe(
+    (response)=>{
+      this.data=response;
+    }
+  )
+}
+
+data:any=[]
 
 }

@@ -15,11 +15,28 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AddfriendsComponent } from './addfriends/addfriends.component';
 import { ViewfriendsComponent } from './viewfriends/viewfriends.component';
+import { NewnavbarComponent } from './newnavbar/newnavbar.component';
+import { NextnavbarComponent } from './nextnavbar/nextnavbar.component';
+import { GalleryComponent } from './gallery/gallery.component';
+import { ContactusComponent } from './contactus/contactus.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
 
 const myRoute=[
   {
     path:"",
     component:HomeComponent
+  },
+  {
+    path:"gallery",
+    component:GalleryComponent
+  },
+  {
+    path:"aboutus",
+    component:AboutusComponent
+  },
+  {
+    path:"contactus",
+    component:ContactusComponent
   },
   {
     path:"adminlogin",
@@ -62,7 +79,12 @@ const myRoute=[
     NavbarComponent,
     AddcourseComponent,
     AddfriendsComponent,
-    ViewfriendsComponent
+    ViewfriendsComponent,
+    NewnavbarComponent,
+    NextnavbarComponent,
+    GalleryComponent,
+    ContactusComponent,
+    AboutusComponent
   ],
   imports: [
     BrowserModule,

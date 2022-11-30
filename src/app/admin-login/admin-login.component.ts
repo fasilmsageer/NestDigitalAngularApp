@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admin-login',
@@ -10,5 +11,26 @@ export class AdminLoginComponent {
   username=""
   password=""
 
-  
+  constructor(private router:Router){}
+
+
+
+  readlogin=()=>
+  {
+    let data:any={
+      "username":this.username,
+      "password":this.password
+  }
+    console.log(data)
+
+    if (this.username=="admin" && this.password=="nestdigital") {
+
+      this.router.navigate(['/viewcourse'])
+      alert("valid login")
+      
+    } else {
+      alert("invalid login")
+      
+    }
+  }
 }
