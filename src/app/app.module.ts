@@ -7,6 +7,7 @@ import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { EmployeeloginComponent } from './employeelogin/employeelogin.component';
+import { EmployeeregComponent } from './employeereg/employeereg.component';
 
 const myRoute=[
   {
@@ -16,6 +17,14 @@ const myRoute=[
   {
     path:"/adminlogin",
     component:AdminLoginComponent
+  },
+  {
+    path:"/employeelogin",
+    component:EmployeeloginComponent
+  },
+  {
+    path:"/employeereg",
+    component:EmployeeregComponent
   }
 ]
 
@@ -24,7 +33,8 @@ const myRoute=[
     AppComponent,
     AdminLoginComponent,
     HomeComponent,
-    EmployeeloginComponent
+    EmployeeloginComponent,
+    EmployeeregComponent
   ],
   imports: [
     BrowserModule,
