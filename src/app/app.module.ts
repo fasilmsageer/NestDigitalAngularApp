@@ -13,6 +13,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { AddcourseComponent } from './addcourse/addcourse.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { AddfriendsComponent } from './addfriends/addfriends.component';
 
 const myRoute=[
   {
@@ -39,6 +40,10 @@ const myRoute=[
     path:"addcourse",
     component:AddcourseComponent
   },
+  {
+    path:"addfriend",
+    component:AddfriendsComponent
+  },
 ]
 
 @NgModule({
@@ -50,7 +55,8 @@ const myRoute=[
     EmployeeregComponent,
     ViewcourseComponent,
     NavbarComponent,
-    AddcourseComponent
+    AddcourseComponent,
+    AddfriendsComponent
   ],
   imports: [
     BrowserModule,
