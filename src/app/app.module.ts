@@ -10,6 +10,9 @@ import { EmployeeloginComponent } from './employeelogin/employeelogin.component'
 import { EmployeeregComponent } from './employeereg/employeereg.component';
 import { ViewcourseComponent } from './viewcourse/viewcourse.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { AddcourseComponent } from './addcourse/addcourse.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 const myRoute=[
   {
@@ -31,7 +34,11 @@ const myRoute=[
   {
     path:"viewcourse",
     component:ViewcourseComponent
-  }
+  },
+  {
+    path:"addcourse",
+    component:AddcourseComponent
+  },
 ]
 
 @NgModule({
@@ -42,12 +49,15 @@ const myRoute=[
     EmployeeloginComponent,
     EmployeeregComponent,
     ViewcourseComponent,
-    NavbarComponent
+    NavbarComponent,
+    AddcourseComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(myRoute)
+    RouterModule.forRoot(myRoute),
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
