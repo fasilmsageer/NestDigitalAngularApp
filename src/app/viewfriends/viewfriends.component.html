@@ -6,17 +6,29 @@
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <h2>List Of Friends</h2>
                 </div>
-                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3" *ngFor="let i of data" >
-                    <div class="card">
-                        <img src="https://static.vecteezy.com/system/resources/previews/011/432/528/original/enter-login-and-password-registration-page-on-screen-sign-in-to-your-account-creative-metaphor-login-page-mobile-app-with-user-page-flat-illustration-vector.jpg" class="card-img-top" alt="...">
-                        <div class="card-body text-center">
-                          <h5 class="card-title">Name:{{i.name}}</h5>
-                          <p class="card-text">Friend Name:{{i.friendName}}</p>
-                          <p class="card-text">Friend Nickname:{{i.friendNickName}}</p>
-                          <p class="card-text">Friend Description:{{i.DescribeYourFriend}}</p>
-                        </div>
+                
+                <ng-container *ngIf="loading; then loadingScreen; else dataScreen"></ng-container>
+                <ng-template #loadingScreen>
+                    <div class="d-flex align-items-center">
+                        <strong>Loading...</strong>
+                        <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
                       </div>
-                </div>
+
+                </ng-template>
+                <ng-template #dataScreen>
+                    <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3" *ngFor="let i of data" >
+                        <div class="card">
+                            <img src="https://static.vecteezy.com/system/resources/previews/011/432/528/original/enter-login-and-password-registration-page-on-screen-sign-in-to-your-account-creative-metaphor-login-page-mobile-app-with-user-page-flat-illustration-vector.jpg" class="card-img-top" alt="...">
+                            <div class="card-body text-center">
+                              <h5 class="card-title">Name:{{i.name}}</h5>
+                              <p class="card-text">Friend Name:{{i.friendName}}</p>
+                              <p class="card-text">Friend Nickname:{{i.friendNickName}}</p>
+                              <p class="card-text">Friend Description:{{i.DescribeYourFriend}}</p>
+                            </div>
+                          </div>
+                    </div>
+                </ng-template>
+                
             </div>
         </div>
     </div>

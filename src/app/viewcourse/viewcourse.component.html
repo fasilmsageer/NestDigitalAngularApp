@@ -18,13 +18,24 @@
                           </tr>
                         </thead>
                         <tbody>
-                          <tr *ngFor ="let i of data">
-                            <td>{{i.courseTitle}}</td>
-                            <td>{{i.courseDescription}}</td>
-                            <td>{{i.courseDuration}}</td>
-                            <td>{{i.courseDate}}</td>
-                            <td>{{i.courseVenue}}</td>
-                          </tr>
+
+                          <ng-container *ngIf="loading; then loadingScreen; else dataScreen" ></ng-container>
+                          <ng-template #loadingScreen>
+                            <div class="d-flex align-items-center">
+                              <strong>Loading...</strong>
+                              <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+                            </div>
+                          </ng-template>
+                          <ng-template #dataScreen>
+                            <tr *ngFor ="let i of data">
+                              <td>{{i.courseTitle}}</td>
+                              <td>{{i.courseDescription}}</td>
+                              <td>{{i.courseDuration}}</td>
+                              <td>{{i.courseDate}}</td>
+                              <td>{{i.courseVenue}}</td>
+                            </tr>
+                          </ng-template>
+                          
                         </tbody>
                       </table>
                 </div>

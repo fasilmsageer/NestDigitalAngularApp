@@ -11,11 +11,12 @@ export class ViewfriendsComponent {
   constructor(private api:ApiService){
   api. fetchfriends().subscribe(
     (response)=>{
+      this.loading = false
       this.data=response;
     }
   )
 }
 
 data:any=[]
-
+loading:boolean=true
 }
